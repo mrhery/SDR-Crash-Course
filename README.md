@@ -10,6 +10,8 @@ Dengan menggunakan SDR, sistem komputer mampu untuk proses dan modulasi/demodula
 
 Teknologi SDR ini digunakan pada banyak tempat dan bidang dalam dunia harini termasuk komunikasi tentera, tempat awam, internet dan pelbagai lagi. Melalui SDR ini, secara kasarnya kita mampu untuk menerima apa-apa data yang dipancarkan melalui gelombang radio termasuklah data dari satelit dan telefon bimbit.
 
+Secar teorinya, SDR ini boleh dikatakan satu alat yang boleh menukarkan (convert) siaran (signal) dari analog gelombang radio kepada bacaan digital yang boleh dihubungkan kepada komputer. Dengan teknik  yang sama melalui beberapa software juga boleh ditetapkan sekian data digital yang ingin dipancarkan sebagai gelombang analog semula.
+
 ## 2. Amaran
 Penggunaan SDR secara umum di khalayak ramai bagi tujuan mencuri dengar panggilan atau SMS atau menceroboh saluran ("channel") komunikasi lain adalah salah disisi undang-undang. Setiap penyampaian di dalam risalah adalah untuk tujuan pendidikan dan kegunaan pada ketika kecemasan seperti bencana, perperangan dan aktiviti-aktiviti yang tidak melanggar undang-undang.
 
@@ -245,15 +247,20 @@ Biasanya penggunaan DSB dalam penyampaian audio atau data, USB dan LSB akan menj
 
 Bagi bacaan LSB dan USB adalah bacaan sebelah pihak sahaja samada atas (upper) atau bawah (low) maka kedua-dua teknik ini disebut juga sebaga SSB (Signle-Sideband). Dalam SSB salah satu pihak USB atau LSB akan diabaikan bagi mengurangkan keperluan bandwidth bacaan siaran. Ini menjadikan SSB agak lebih "spectral efficient" berbanding DSB tadi. USB dan LSB banyak digunakan dalam sistem komunikasi terutamanya bagi radio amatur dan komunikasi radio jarak pendek.
 
-## 8. Terima Komunikasi Radio (Receive Communication Interception)
+## 8. Terima Komunikasi Radio (Receiving Radio Communication)
 
+Bagi penggunaan software SDR++, proses penerimaan dan bacaan dari gelombang ini agak lebih mudah kerana semua tetapan, konfigurasi dan hasil boleh dilihat terus secar visual. Kita hanya perlu tetapan "Source" (sumber device SDR yang telah dihubugnkan ke komputer), "Bandwith", "Sample Rate", "Frequency" dan "Play". Jika data yang diterima itu adalah audio, maka kita boleh mendengar secara langsung dari pembesar suara (speaker) komputer. Rujuk paparan SDR++.
 
+![beza nfm dan wfm](https://github.com/mrhery/SDR-Crash-Course/blob/main/sdrpp-ss.png?raw=true)
 
-## 9. Pancaran Komunikasi Radio (Transmit Radio Communication)
+## 9. Memancar Komunikasi Radio (Transmitting Radio Communication)
 
 ## 10. Pengacau Komunikasi Radio (Radio Communication Jammer)
 
 ## 11. 3G / 4G IMSI Catcher - MITM Attack
 
 ## 12. Konsep Binaan Antena
+
+## 13. Penutup
+Risalah ini telah ditulis oleh Mr Hery dari Malaysia Open Cyber Security (MyOPECS) bagi kegunaan kelas sebagai salah satu modul di CyberSec Private Training yang berlangsung selama 4 bulan. Risalah ini juga diperiksa, disunting dan dikomentar oleh beberapa rakan ahli MyOPECS yang lain serta rakan-rakan dari anggota polis, tentera dan kakitangan kerajaan lainnya.
 
