@@ -50,6 +50,8 @@ Terdapat banyak perkakasan SDR diluar sana dan mempunyai kelebihan dan kekuranga
 	Bandwidth: 61.44Mhz+
  
 	Range: unknown
+
+![gambar limesdr](https://github.com/mrhery/SDR-Crash-Course/blob/main/limesdr.jpg?raw=true)
 		
 Terdapat banyak lagi jenis SDR yang lain terutama pengeluaran dari China sendiri. Tetapi antara ciri-ciri yang paling penting adalah frekuensi yang disokong oleh SDR itu sendiri. Kerana penerimaan gelombang radio berbeza-beza mengikut jenis komunikasi. Antara SDR yang lain seperti BladeSDR dan AirSpy yang agak popular. Tetapi perkakasan SDR ini agak sukar untuk didapati dari Malaysia. Tempahan luar negara juga kebanyakkannya adalah daripada China dan sebahagian dari China ini terkadang tidak dapat berfungsi dengan baik. 
 
