@@ -210,21 +210,37 @@ Offset tuning ini biasanya digunakan untuk menukarkan band frekuensi yang disoko
 
 Tetapan ini penting untuk mengimbangi frekuensi bagi perkakasan yang terkesan dengan "DC Spike". Kami sendiri mengalami masalah sebegini pada HackRF kami yang mana pada paparan skrin frekuensi terpada satu "spike" yang mengganggu frekuensi ditengah-tengah graf.
 
-**7. Wideband FM **
+**7. Wideband FM (WFM) / Narrowband FM (NFM)***
 
 WFM merujuk kepada sejenis modulasi frekuensi di mana frekuensi siaran yang dimodulasi (dipancar/dibaca) dalam julat yang luas. Ia biasanya digunakan untuk penyiaran radio FM komersial. Dalam WFM, sisihan frekuensi siaran yang dipancarkan adalah agak besar, membolehkan penghantaran audio berkualiti. WFM digunakan untuk menyiarkan muzik dan kandungan audio lain dengan kualiti audio yang baik.
 
-**8. Narrowband FM**
-
 NFM merujuk kepada sejenis modulasi frekuensi di mana sisihan frekuensi siaran dipancar/dibaca adalah lebih sempit/fokus, menghasilkan julat frekuensi siaran yang lebih kecil. NFM biasanya digunakan untuk komunikasi radio dua hala, seperti dalam walkie-talkie, radio amatur, dan sistem radio keselamatan awam. NFM adalah lebih cekap secara spektrum berbanding WFM, tetapi ia tidak menyokong beberapa kualiti audio untuk mencapai ketumpatan saluran atau kualiti audio yang lebih tinggi.
 
-**9. Variable Gain Amplifier (VGA)**
+Lihat rajah dibawah bagi perbezaan WFM dan NFM dalam graf.
+
+![beza nfm dan wfm](https://www.researchgate.net/profile/Osameh-Al-Kofahi/publication/295397876/figure/fig9/AS:668784109051919@1536461965962/Wideband-and-narrowband-signals.png)
+
+**8. Variable Gain Amplifier (VGA)**
 
 VGA adalah sama seperti gain tetapi VGA adalah lebih spesifik kepada siaran penerimaan. Meningkatkan VGA pada SDR mampu meninggikan sensitiviti dalam menerima gelombang sebelum ditukar (convert) ke digital, akan tetapi peningkatan VGA mungkin mempunyai ganggung dan campur baur dengan gelombang lain. Mungkin bagi siaran yang gelombangnya agak kurang kuat, VGA dapat bantu untuk mendapatkan siaran itu dengan keadaan kurang bersih.
 
-**10. Double-Sideband (DSB)**
+**9. Double-Sideband (DSB) / Low-Sideband (LSB) / Upper-Sideband (USB)**
 
-**11. Low-Sideband (LSB)**
+DSB adalah sejenis modulasi AM yang mana kedua-dua "upper-band" dan "low-band" dihantar/diterima bersama "carrier frequency". Carrier frquency ini adalah frequency utama yang digunakan, maka nilai frekuensi yang berada disebelah atas dipanggil Upper-Sideband dan yang berada disebelah bawah (atau sebelumnya) dipanggil Low-Sideband. Rujuk rajah berikut:
 
-**10. Upper-Sideband (USB)**
+![dsb lsb usb](https://www.tutorialspoint.com/analog_communication/images/double_sideband_suppressesd_carrier.jpg)
+![dsb lsb usb](https://static.javatpoint.com/tutorial/analog-communication/images/dsbsc-double-sideband-suppress-carrier1.png)
 
+Biasanya penggunaan DSB dalam penyampaian audio atau data, USB dan LSB akan menjadi bagai cermin bagi data yang asal tadi. Dengan itu, DSB dianggap agak kurang "spectral efficient" berbanding teknik lain seperti Single-Sideband (SSB) atau Vestigial Sideband (VSB) kerana DSB memanrcarkan data yang sama pada kedua-dua belah pihak. Penggunaan DSB agak kurang di zaman modern ini untuk sistem komunikasi kerana kelemahannya tadi.
+
+Bagi bacaan LSB dan USB adalah bacaan sebelah pihak sahaja samada atas (upper) atau bawah (low) maka kedua-dua teknik ini disebut juga sebaga SSB (Signle-Sideband). Dalam SSB salah satu pihak USB atau LSB akan diabaikan bagi mengurangkan keperluan bandwidth bacaan siaran. Ini menjadikan SSB agak lebih "spectral efficient" berbanding DSB tadi. USB dan LSB banyak digunakan dalam sistem komunikasi terutamanya bagi radio amatur dan komunikasi radio jarak pendek.
+
+## 8. Pintas Komunikasi Radio (Radio Communication Interception)
+
+## 9. Emulasi Pancaran Komunikasi Radio (Emulate Radio Communication Beam)
+
+## 10. Pengacau Komunikasi Radio (Radio Communication Jammer)
+
+## 11. 3G / 4G IMSI Catcher - MITM Attack
+
+## 12. Konsep Binaan Antena
