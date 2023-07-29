@@ -17,21 +17,33 @@ Penggunaan SDR secara umum di khalayak ramai bagi tujuan mencuri dengar panggila
 Terdapat banyak perkakasan SDR diluar sana dan mempunyai kelebihan dan kekurangan tersendiri. Kami sendiri menggunakan beberapa SDR untuk membuat kajian bagi penulisan risalah ini. Terdapat beberapa ciri-ciri yang perlu diperhatikan dalam memilih SDR mengikut keperluan kita sendiri. Berikut adalah beberapa SDR yang popular dipasaran:
 
 **1. RTL-SDR (Low-Cost RM 100++)**
+
 	Frekuensi: 500khz-1.75Ghz
+ 
 	Mod: Penerima ("receiver")
+ 
 	Bandwidth: 10Mhz
+ 
 	Range: 80dB
 	
 **2. HackRF (Low-Cost RM 900++)**
+
 	Frekuensi: 1Mhz-6Ghz
+ 
 	Mod: Penerima & Pemancar ("transreceiver") half-duplex
+ 
 	Bandwidth: 20Mhz
+ 
 	Range: ~48dB
 
 **3. LimeSDR (Low-Cost RM 5000++)**
+
 	Frekuensi: 100Khz-3.8Ghz
+ 
 	Mod: Penerima & Pemancar ("transreceiver") full-duplex
+ 
 	Bandwidth: 61.44Mhz+
+ 
 	Range: unknown
 		
 Terdapat banyak lagi jenis SDR yang lain terutama pengeluaran dari China sendiri. Tetapi antara ciri-ciri yang paling penting adalah frekuensi yang disokong oleh SDR itu sendiri. Kerana penerimaan gelombang radio berbeza-beza mengikut jenis komunikasi. Antara SDR yang lain seperti BladeSDR dan AirSpy yang agak popular. Tetapi perkakasan SDR ini agak sukar untuk didapati dari Malaysia. Tempahan luar negara juga kebanyakkannya adalah daripada China dan sebahagian dari China ini terkadang tidak dapat berfungsi dengan baik. 
