@@ -42,13 +42,20 @@ Pengalaman kami sendiri telah membeli sebanyak 6 buah SDR dan yang boleh digunak
 Secara asasnya, frekuensi yang digunakan oleh perkakasan yang berada dimuka bumi adalah tidak sama kategorinya dan frekuensinya yang digunakan dilangit (satelit). Berikut adalah pecahan frekuensi untuk dimuka bumi:
 
 **1. VLF - Very Low Frequency (3Khz - 30Khz)**: Kegunaan navigasi maritim
+
 **2. LF - Low Frequency (30Khz - 300Khz)**: Kegunaan navigasi
+
 **3. MF - Medium Frequency (300Khz - 3Mhz)**: Radio AM Maritim
+
 **4. HF - High Frequency (3Mhz - 30Mhz)**: Radio gelombang pendek, telefon radio
+
 **5. VHF - Very High Frequency (30Mhz - 300Mhz)**: Saluran TV analog, radio FM, navigasi
+
 **6. UHF - Ultra High Frequency (300Mhz - 3Ghz)**: Salurah TV analog/digital, telefon pintar, GPS
+
 **7. SHF - Super High Frequency (3Ghz - 30Ghz)**: Sistem satelit, telekomunikasi gelombang mikro (microwave)
-**7. EHF - Extremely High Frequency (30Ghz - 300Ghz)**: Radio astronomi, sistem radar
+
+**8. EHF - Extremely High Frequency (30Ghz - 300Ghz)**: Radio astronomi, sistem radar
 
 Dari pecahan diatas, hanya frekuensi bermula 1Ghz-110Ghz sahaja yang digunakan pada satelit (secara rasmi dan umum). Berikut adalah pecahan kategori bagi frekuensi satelit:
 
