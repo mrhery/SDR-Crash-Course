@@ -166,7 +166,7 @@ Sesetengah satelit saintifik menggunakan frekuensi S-Band untuk pelbagai tujuan 
 
 Bukan sekadar satellit, bahkan mana-mana SDR mampu untuk memintas apa-apa komunikasi radio untuk curi dengar, menghalang dan memancar semula gelombang termasuklah gelombang WiFi, telekomunikasi 3G, 4G dan lain-lain. Biasa RTL-SDR mereka gunakan untuk mencuri dengar komunikasi pesawat udara dan kapal-kapal laut. Memintas komunikasi adalah menyalahi undang-undang Malaysia. Kami hanya memaparkan cara untuk mendapatkan maklumat yang dibenarkan sahaja.
 
-## Installation (Pemasangan) Software & Operating System (OS)
+## 6. Installation (Pemasangan) Software & Operating System (OS)
 Dalam risalah ini kita akan belajar menggunakan 2 jenis software (unutk Windows);
 1. First party - software yang memang menjadi tunggak API utama bagi HackRF / RTL-SDR
 2. Third party - software yang dibangunkan berasaskan API utama diatas.
@@ -179,7 +179,7 @@ Bagi software third-party pula kami memilih untuk menggunakan SDR++ dan Wireshar
 
 Terdapat sebuah OS yang dibangungkan khas untuk operasi komunikasi radio ini iaitu DragonOS yang mana OS ini adalah Linux. Dalam OS ini semua software untuk komunikasi radio telah terpasang. Muatturun disini: https://cemaxecuter.com/
 
-## Istilah-istilah Konfigurasi
+## 7. Istilah-istilah Konfigurasi
 Dalam konfigurasi komunikasi radio ini, terdapat banyak istilah-istilah yang terlibat. Walaubagaimanapun, kami menulis dari sudut umum dan kearah keselamatan siber (CyberSec) bukan terperinci dan khusus untuk komunikasi radio.
 
 **1. Gain Control / LNA (Low-Noise Amplification) Gain**
