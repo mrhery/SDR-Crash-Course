@@ -312,12 +312,29 @@ Usage:
 
 Command bagi terima boleh gunakan command `hackrf_transfer -f <nilai frekuensi> -r <kosongkan atau nama file untuk rekod> -s <nilai sample rate>`. Kita boleh gunakan `-a 1` jika kita ada gunakan alatan tambahan atau ingin menguatkan penghantaran siaran. Antara tetapan lain seperti `-l <nilai dB>` untuk aktifkan LNA atau `-g <nilai dB>` untuk aktifkan VGA atau `-c <nilai cw>` untuk aktifkan CW.
 
+Contoh bagi rekod frekuensi kunci kereta pada 315Mhz:
+```
+hackrf_transfer -f 315000000 -r kunci-kereta-nissan-almera -s 20000000
+```
+Setalah run command diatas, sekarang tekan "unlock" pada kunci kereta dan kemudian kembali kepada command prompt dan tekan `Ctrl + c` untuk hentikan rekod. Maka satu file bernama `kunci-kereta-nissan-almera` telah dicipta, maka kita boleh buat siaran semula untuk "unlock" kereta.
+
 ### 8.C. Latihan Radio FM
 Sebagai latihan, jika anda ada SDR bersama, boleh cuba untuk dapatkan siaran Radio FM yang bermula dari 80Mhz - 110Mhz. Gunakan tetapan WFM bagi mendapatkan siaran yang lebih baik. Cuba juga tukar tetapan kepada NFM untuk lihat perbezaannya. Kadangkala siaran tidak begitu jelas, maka boleh cuba untuk mengubah tetapan gain kepada lebih tinggi untuk lihat perbezaannya.
 
 Bagi radio-radio komunikasi yang lain juga sama caranya seperti radio FM (jika anda tahun frekuensi mereka), tetapi bagi komunikasi seperti radio amatur, walkie-talkie biasanya gunakan tetapan NFM. 
 
 ## 9. Memancar Komunikasi Radio (Transmitting Radio Communication)
+Melalui SDR++ kita tidak boleh memancar/transmit data. Maka kita akan gunakan PhotosSDR untuk membuat proses transmission dengan command berikut:
+
+```
+hackrf_transfer -f <nilai frekuensi> -t <nama file atau kosongkan> -s <nilai sample rate> -a 1 -x 24
+```
+
+Untuk memancar semula rekod kunci kereta dari contoh sebelum ini, boleh gunakan command:
+```
+hackrf_transfer -f 315000000 -t kunci-kereta-nissan-almera -s 20000000 -a 1 -x 24
+```
+Lihat apa yang berlaku pada kereta yang kita rekod kuncinya.
 
 ## 10. Pengacau Komunikasi Radio (Radio Communication Jammer)
 
