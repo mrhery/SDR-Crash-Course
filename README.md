@@ -187,6 +187,19 @@ Diantara kedua-dua software ini, pilihan software third-party adalah lebih mudah
 
 Bagi muatturun API utama HackRF / RTL-SDR boleh dapati dari repository PhotosSDR: https://downloads.myriadrf.org/builds/PothosSDR/
 
+Bagi installation PhotosSDR, kita perlu menambah "path" bagi fail PhotosSDR ini kedalam "System Environement Variable". Ikut langkah seperti berikut:
+1. Properties My Computer
+2. Tekan Advance System Setting
+3. Tekan pada tab "Advanced"
+4. Dibawah sebelah kanan, tekan "Environment Variables"
+5. Dibahagian bawah "System Variables", cari valiable "Path" dan tekan "Edit"
+6. Dari sini, tekan "New" dan masukkan "path" bagi fail installasi "PhotosSDR", biasanya seperti berikut: `C:\Program Files\PothosSDR\bin`
+7. Tekan "Apply" & "Save"
+
+Untuk mencuba / periksa samada installasi berjaya, kita boleh buka "Command Prompt" dan run command berikut: `hackrf_info`. Jika ia memaparkan seperti berikut maka ini bermakna installasi berjaya.
+
+![install hackrf](https://github.com/mrhery/SDR-Crash-Course/blob/main/hackrf-install.jpg?raw=true)
+
 Bagi software third-party pula kami memilih untuk menggunakan SDR++ dan Wireshark. Kebiasaannya SDR++ adalah cukup untuk menerima/rekod data samaada audio seperti radio FM/AM, L-Band satelit dan lain-lain lagi. Akan tetapi SDR++ bukanlah satu software yang baik untuk membuat analisis paket. Maka bagi analsis paket boleh gunakan Wireshark. Hal ini kerana penerimaan data dari satelit kebanyakkannya adalah data yang telah dienkrip (encrypted data). Maka bagi proses dekripsi (decryption) memerlukan proses analisis terlebih dahulu.
 
 Terdapat sebuah OS yang dibangungkan khas untuk operasi komunikasi radio ini iaitu DragonOS yang mana OS ini adalah Linux. Dalam OS ini semua software untuk komunikasi radio telah terpasang. Muatturun disini: https://cemaxecuter.com/
@@ -247,11 +260,62 @@ Biasanya penggunaan DSB dalam penyampaian audio atau data, USB dan LSB akan menj
 
 Bagi bacaan LSB dan USB adalah bacaan sebelah pihak sahaja samada atas (upper) atau bawah (low) maka kedua-dua teknik ini disebut juga sebaga SSB (Signle-Sideband). Dalam SSB salah satu pihak USB atau LSB akan diabaikan bagi mengurangkan keperluan bandwidth bacaan siaran. Ini menjadikan SSB agak lebih "spectral efficient" berbanding DSB tadi. USB dan LSB banyak digunakan dalam sistem komunikasi terutamanya bagi radio amatur dan komunikasi radio jarak pendek.
 
+**9. Continuous Wave (CW)**
+CW merujuk kepada sejenis modulasi yang digunakan untuk menghantar pesanan gelombang ringkas secara berterusan. Dalam penyiaran/transmission bagi CW ini, siaran "carrier" ini dalam keadaan "on" dan "off" pada sekian jarak masa (yang pendek) untuk mewakili kod Morse. Setiap karakter dalam kod Morse mempunyai urutan tersendiri dengan "dot" dan "dash". Maka siaran/transmisi kod Morse ini jugak akan berbentuk begitu. Bagi tetapan CW ini tidak disokong oleh semua perkakasan. Seperti cubaan kami pada HackRF dan RTL-SDR, CW ini boleh digunakan.
+
+![bentuk kod morse dalam frequency](https://github.com/mrhery/SDR-Crash-Course/blob/main/Morse_Code.png?raw=true)
+
 ## 8. Terima Komunikasi Radio (Receiving Radio Communication)
 
+### 8.A. SDR++
 Bagi penggunaan software SDR++, proses penerimaan dan bacaan dari gelombang ini agak lebih mudah kerana semua tetapan, konfigurasi dan hasil boleh dilihat terus secar visual. Kita hanya perlu tetapan "Source" (sumber device SDR yang telah dihubugnkan ke komputer), "Bandwith", "Sample Rate", "Frequency" dan "Play". Jika data yang diterima itu adalah audio, maka kita boleh mendengar secara langsung dari pembesar suara (speaker) komputer. Rujuk paparan SDR++.
 
-![beza nfm dan wfm](https://github.com/mrhery/SDR-Crash-Course/blob/main/sdrpp-ss.png?raw=true)
+![ss sdr plus plus](https://github.com/mrhery/SDR-Crash-Course/blob/main/sdrpp-ss.png?raw=true)
+
+Melalui paparan diatas, panel disebelah kiri adalah segala tetapan bagi SDR dan sebelah kanan terdapat visual frekuensi dalam bentuk graf (FFT) dan "water-fall". Graf itu biasanya digunakan untuk "tuning" pada frekuensi yang diperlukan dan melalui graf itu juga kita boleh lihat seberapa frekuensi yang diterima mengikut perubahan "spike" pada graf tersebut. Visual water-fall pula digunakan sebagai "heat-map" menunjukkan seberapa kuat gelombang siaran yang diterima mengikut warna.
+
+Menu sebelah kanan sekali adalah tetapan bagi paparan visual. Boleh dianggap seperti "zoom in/out" bagi graf tersebut dari segi "dB" dan "Hz". Bagi penerimaan data yang bukan audio contoh seperti gambar, data yang dihantar oleh kunci kereta atau data dari satelit, data-data ini tidak dapat didengari melalui pembesar suara komputer. Maka tetapan "Raw" boleh digunakan supaya data ini boleh direkod dan di-dikodkan untuk mendapatkan data yang asal.
+
+Sama juga bagi data-data yang di-enkrip (encrypted data) tidak boleh didengari walaupun data yang diterima itu adalah audio. Biasanya pintasan panggilan dari "crypto-phone" tidak boleh didengari secara langsung dari SDR, maka format Raw diperlukan untuk merekod dahulu dan kemudiannya di-dekripkan kemudian menggunakan software lain.
+
+### 8.B. PhotosSDR CLI
+Bagi penggunaan CLI, command yang biasa digunakan untuk menerima/merekod data yang diterima adalah command `hackrf_transfer`. Melalui command ini kita boleh terima dan hantar apa-apa data yang kita mahukan pada sekian frekuensi yang ditetapkan. Kita boleh lihat tetapan yang ada pada command ini dengan run `hackrf_transfer` di command prompt seperti berikut:
+
+```
+C:\Users\User>hackrf_transfer
+specify one of: -t, -c, -r, -w
+Usage:
+        -h # this help
+        [-d serial_number] # Serial number of desired HackRF.
+        -r <filename> # Receive data into file (use '-' for stdout).
+        -t <filename> # Transmit data from file (use '-' for stdin).
+        -w # Receive data into file with WAV header and automatic name.
+           # This is for SDR# compatibility and may not work with other software.
+        [-f freq_hz] # Frequency in Hz [0MHz to 7250MHz].
+        [-i if_freq_hz] # Intermediate Frequency (IF) in Hz [2150MHz to 2750MHz].
+        [-o lo_freq_hz] # Front-end Local Oscillator (LO) frequency in Hz [84MHz to 5400MHz].
+        [-m image_reject] # Image rejection filter selection, 0=bypass, 1=low pass, 2=high pass.
+        [-a amp_enable] # RX/TX RF amplifier 1=Enable, 0=Disable.
+        [-p antenna_enable] # Antenna port power, 1=Enable, 0=Disable.
+        [-l gain_db] # RX LNA (IF) gain, 0-40dB, 8dB steps
+        [-g gain_db] # RX VGA (baseband) gain, 0-62dB, 2dB steps
+        [-x gain_db] # TX VGA (IF) gain, 0-47dB, 1dB steps
+        [-s sample_rate_hz] # Sample rate in Hz (2-20MHz, default 10MHz).
+        [-n num_samples] # Number of samples to transfer (default is unlimited).
+        [-c amplitude] # CW signal source mode, amplitude 0-127 (DC value to DAC).
+        [-R] # Repeat TX mode (default is off)
+        [-b baseband_filter_bw_hz] # Set baseband filter bandwidth in Hz.
+        Possible values: 1.75/2.5/3.5/5/5.5/6/7/8/9/10/12/14/15/20/24/28MHz, default <= 0.75 * sample_rate_hz.
+        [-C ppm] # Set Internal crystal clock error in ppm.
+        [-H hw_sync_enable] # Synchronise USB transfer using GPIO pins.
+```
+
+Command bagi terima boleh gunakan command `hackrf_transfer -f <nilai frekuensi> -r <kosongkan atau nama file untuk rekod> -s <nilai sample rate>`. Kita boleh gunakan `-a 1` jika kita ada gunakan alatan tambahan atau ingin menguatkan penghantaran siaran. Antara tetapan lain seperti `-l <nilai dB>` untuk aktifkan LNA atau `-g <nilai dB>` untuk aktifkan VGA atau `-c <nilai cw>` untuk aktifkan CW.
+
+### 8.C. Latihan Radio FM
+Sebagai latihan, jika anda ada SDR bersama, boleh cuba untuk dapatkan siaran Radio FM yang bermula dari 80Mhz - 110Mhz. Gunakan tetapan WFM bagi mendapatkan siaran yang lebih baik. Cuba juga tukar tetapan kepada NFM untuk lihat perbezaannya. Kadangkala siaran tidak begitu jelas, maka boleh cuba untuk mengubah tetapan gain kepada lebih tinggi untuk lihat perbezaannya.
+
+Bagi radio-radio komunikasi yang lain juga sama caranya seperti radio FM (jika anda tahun frekuensi mereka), tetapi bagi komunikasi seperti radio amatur, walkie-talkie biasanya gunakan tetapan NFM. 
 
 ## 9. Memancar Komunikasi Radio (Transmitting Radio Communication)
 
