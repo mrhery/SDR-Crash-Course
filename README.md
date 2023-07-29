@@ -164,7 +164,7 @@ Satelit Radar Apertur Sintetik (SAR) sering menggunakan frekuensi S-Band untuk k
 **3. Scientific satellites**
 Sesetengah satelit saintifik menggunakan frekuensi S-Band untuk pelbagai tujuan penderiaan dan penghantaran data.
 
-Bukan sekadar satellit, bahkan mana-mana SDR mampu untuk memintas apa-apa komunikasi radio untuk curi dengar, menghalang dan memancar semula gelombang termasuklah gelombang WiFi, telekomunikasi 3G, 4G dan lain-lain. Biasa RTL-SDR mereka gunakan untuk mencuri dengar komunikasi pesawat udara dan kapal-kapal laut. Meminsta komunikasi adalah menyelahi undang-undang Malaysia. Kami hanya memaparkan cara untuk mendapatkan maklumat yang dibenarkan sahaja.
+Bukan sekadar satellit, bahkan mana-mana SDR mampu untuk memintas apa-apa komunikasi radio untuk curi dengar, menghalang dan memancar semula gelombang termasuklah gelombang WiFi, telekomunikasi 3G, 4G dan lain-lain. Biasa RTL-SDR mereka gunakan untuk mencuri dengar komunikasi pesawat udara dan kapal-kapal laut. Memintas komunikasi adalah menyalahi undang-undang Malaysia. Kami hanya memaparkan cara untuk mendapatkan maklumat yang dibenarkan sahaja.
 
 ## Installation (Pemasangan) Software & Operating System (OS)
 Dalam risalah ini kita akan belajar menggunakan 2 jenis software (unutk Windows);
