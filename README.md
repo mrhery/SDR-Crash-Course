@@ -167,15 +167,15 @@ Sesetengah satelit saintifik menggunakan frekuensi S-Band untuk pelbagai tujuan 
 Bukan sekadar satellit, bahkan mana-mana SDR mampu untuk memintas apa-apa komunikasi radio untuk curi dengar, menghalang dan memancar semula gelombang termasuklah gelombang WiFi, telekomunikasi 3G, 4G dan lain-lain. Biasa RTL-SDR mereka gunakan untuk mencuri dengar komunikasi pesawat udara dan kapal-kapal laut. Memintas komunikasi adalah menyalahi undang-undang Malaysia. Kami hanya memaparkan cara untuk mendapatkan maklumat yang dibenarkan sahaja.
 
 ## 6. Installation (Pemasangan) Software & Operating System (OS)
-Dalam risalah ini kita akan belajar menggunakan 2 jenis software (unutk Windows);
-1. First party - software yang memang menjadi tunggak API utama bagi HackRF / RTL-SDR
-2. Third party - software yang dibangunkan berasaskan API utama diatas.
+Dalam risalah ini kita akan belajar menggunakan 2 jenis software (untuk Windows);
+1. (PhotosSDR) First party - software yang menjadi tunggak API utama bagi HackRF / RTL-SDR
+2. (SDR++) Third party - software yang dibangunkan berasaskan API utama diatas.
 
-Diantara kedua-dua software ini, pilihan software third-party adalah lebih mudah untuk digunakan kerana mereka telah bangunkan software itu dalam bentuk yang mudah difahami berbanding API utama itu hanyalah command-line interface (CLI). Akan tetapi, tidak dapat dinafikan, keperluan pengetahun berkenaan API utama itu adalah penting kerana software third-party kadangkala tidak disokong oleh sesetengah device tambahan pula jika kita mahu bangungkan sendiri toolkit untuk SDR HackRF / RTL-SDR kita sendiri.
+Diantara kedua-dua software ini, pilihan software third-party adalah lebih mudah untuk digunakan kerana mereka telah bangunkan software itu dalam bentuk yang mudah difahami berbanding API utama itu hanyalah command-line interface (CLI). Akan tetapi, tidak dapat dinafikan, keperluan pengetahun berkenaan API utama itu adalah penting kerana software third-party kadangkala tidak disokong oleh sesetengah device tambahan pula jika kita mahu bangungkan sendiri toolkit untuk SDR HackRF / RTL-SDR.
 
 Bagi muatturun API utama HackRF / RTL-SDR boleh dapati dari repository PhotosSDR: https://downloads.myriadrf.org/builds/PothosSDR/
 
-Bagi software third-party pula kami memilih untuk menggunakan SDR++ dan Wireshark. Kebiasaannya SDR++ adalah cukup untuk menerima/rekod data samaada audio seperti radio FM/AM, L-Band satelit dan lai-lain lagi. Akan tetapi SDR++ bukanlah satu software yang baik untuk membuat analsis paket. Maka bagi analsis paket boleh gunakan Wireshark. Hal ini kerana penerimaan data dari satelit kebanyakkannya adalah data yang telah dienkrip (encrypted data). Maka bagi proses dekripsi (decryption) memerlukan proses analisis terlebih dahulu.
+Bagi software third-party pula kami memilih untuk menggunakan SDR++ dan Wireshark. Kebiasaannya SDR++ adalah cukup untuk menerima/rekod data samaada audio seperti radio FM/AM, L-Band satelit dan lain-lain lagi. Akan tetapi SDR++ bukanlah satu software yang baik untuk membuat analisis paket. Maka bagi analsis paket boleh gunakan Wireshark. Hal ini kerana penerimaan data dari satelit kebanyakkannya adalah data yang telah dienkrip (encrypted data). Maka bagi proses dekripsi (decryption) memerlukan proses analisis terlebih dahulu.
 
 Terdapat sebuah OS yang dibangungkan khas untuk operasi komunikasi radio ini iaitu DragonOS yang mana OS ini adalah Linux. Dalam OS ini semua software untuk komunikasi radio telah terpasang. Muatturun disini: https://cemaxecuter.com/
 
@@ -183,24 +183,48 @@ Terdapat sebuah OS yang dibangungkan khas untuk operasi komunikasi radio ini iai
 Dalam konfigurasi komunikasi radio ini, terdapat banyak istilah-istilah yang terlibat. Walaubagaimanapun, kami menulis dari sudut umum dan kearah keselamatan siber (CyberSec) bukan terperinci dan khusus untuk komunikasi radio.
 
 **1. Gain Control / LNA (Low-Noise Amplification) Gain**
+
 Kebanyakkan SDR menyokong fungsi LNA ini. Kawalan gain ini boleh dilakukan pada software yang digunakan itu sendiri. Gain ini secara kasarnya adalah tahap sensitiviti untuk menerima gelombang dan semakin tinggi gain mungkin boleh mendapatkan lebih data tetapi "noise" juga akan semakin tinggi. Fungsi LNA ini membantu untuk peningkatan gain dengan kadar "noise" yang lebih rendah. 
 
 Kadangkala gelombang yang agak jauh dari SDR atau antena kita memerlukan gain yang agak tinggi, dan kadangkala kita memerlukan gain yang rendah untuk mendapatkan data yang lebih bersih dan jelas. Gain ini juga dipengaruhi dan mempengaruhi jenis antena yang digunakan.
 
 **2. Automatic Gain Control (AGC)**
+
 Sementara kawalan gain ini memberi kesan kepada gelmbang yang diterima (termasuk noise), maka sesetengah SDR atau software mempunyai ciri-ciri tambahan iaitu AGC yang mampu "auto-tune gain" untuk dapatkan data atau siaran dengan lebih baik dalam keadaan noise yang masuk akal. Tidak semua SDR atau software yang mempunyai ciri-ciri ini. HackRF sendiri tiada ciri-ciri AGC ini (mungkin firmware lebih baru akan ada). 
 
-**3. Sample Rate**
+**3. Sample Rate / Bandwidth**
+
 Sample rate ini merujuk kepada jumlah "sample" yang diambil setiap saat daripada frekuensi radio yang kemudiannya ditukar (convert) kepada digital data. Sample rate yang lebih tinggi boleh dikatakan data digital dibaca dengan lebih banyak. Kebiasaanya tetapan ini boleh tetapkan kepada yang paling besar kecuali bagi frekuensi audio seperti FM/AM radio perlu tetapkan ikut keperluan. Hal ini kerana, audio yang didengar secara langsung (live) dengan sample rate yang tinggi mungkin bercampur baur dengan frequency yang tidak penting.
 
 Nilai sample rate ini bergantung kepada jenis SDR yang digunakan. HackRF menyokong sehingga 20Mhz, RTL-SDR hanya 2Mhz sahaja.
 
 **4. Bias-T**
+
 Tetapan bias-T ini membolehkan SDR untuk menajana sedikit elektrik bagi alatan tambahan RF amplifier. Contohnya seperti antena tambahan seperti MLA30+ magnetic loop. Ada setengah SDR mempunyai Bias-T sendiri dan boleh mengesan antenan tambahan itu secara automatik.
 
 **5. Offset Tuning**
+
 Offset tuning ini biasanya digunakan untuk menukarkan band frekuensi yang disokong kapada band yang lain. Tapi penggunaan tetapan ini biasanya bergantung kepada SDR itu sendiri jika tidak menyokong fungsi ini maka memerlukan perkakasan tambahan. Sebagai contoh HackRF yang tidak menyokong frekuensi rendah dari 1Mhz, maka offset tuning boleh membantu untuk menerima data yang kurang dari 1Mhz. 
 
 **6. IQ Correction**
+
 Tetapan ini penting untuk mengimbangi frekuensi bagi perkakasan yang terkesan dengan "DC Spike". Kami sendiri mengalami masalah sebegini pada HackRF kami yang mana pada paparan skrin frekuensi terpada satu "spike" yang mengganggu frekuensi ditengah-tengah graf.
+
+**7. Wideband FM **
+
+WFM merujuk kepada sejenis modulasi frekuensi di mana frekuensi siaran yang dimodulasi (dipancar/dibaca) dalam julat yang luas. Ia biasanya digunakan untuk penyiaran radio FM komersial. Dalam WFM, sisihan frekuensi siaran yang dipancarkan adalah agak besar, membolehkan penghantaran audio berkualiti. WFM digunakan untuk menyiarkan muzik dan kandungan audio lain dengan kualiti audio yang baik.
+
+**8. Narrowband FM**
+
+NFM merujuk kepada sejenis modulasi frekuensi di mana sisihan frekuensi siaran dipancar/dibaca adalah lebih sempit/fokus, menghasilkan julat frekuensi siaran yang lebih kecil. NFM biasanya digunakan untuk komunikasi radio dua hala, seperti dalam walkie-talkie, radio amatur, dan sistem radio keselamatan awam. NFM adalah lebih cekap secara spektrum berbanding WFM, tetapi ia tidak menyokong beberapa kualiti audio untuk mencapai ketumpatan saluran atau kualiti audio yang lebih tinggi.
+
+**9. Variable Gain Amplifier (VGA)**
+
+VGA adalah sama seperti gain tetapi VGA adalah lebih spesifik kepada siaran penerimaan. Meningkatkan VGA pada SDR mampu meninggikan sensitiviti dalam menerima gelombang sebelum ditukar (convert) ke digital, akan tetapi peningkatan VGA mungkin mempunyai ganggung dan campur baur dengan gelombang lain. Mungkin bagi siaran yang gelombangnya agak kurang kuat, VGA dapat bantu untuk mendapatkan siaran itu dengan keadaan kurang bersih.
+
+**10. Double-Sideband (DSB)**
+
+**11. Low-Sideband (LSB)**
+
+**10. Upper-Sideband (USB)**
 
