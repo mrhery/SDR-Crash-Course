@@ -25,6 +25,8 @@ Terdapat banyak perkakasan SDR diluar sana dan mempunyai kelebihan dan kekuranga
 	Bandwidth: 10Mhz
  
 	Range: 80dB
+
+![gambar rtl-sdr](https://github.com/mrhery/SDR-Crash-Course/blob/main/rtl-sdr.jpg?raw=true)
 	
 **2. HackRF (Low-Cost RM 900++)**
 
@@ -36,6 +38,9 @@ Terdapat banyak perkakasan SDR diluar sana dan mempunyai kelebihan dan kekuranga
  
 	Range: ~48dB
 
+![gambar hackrf one single board](https://github.com/mrhery/SDR-Crash-Course/blob/main/hackrf1.jpg?raw=true)
+![gambar hackrf one porta pack](https://github.com/mrhery/SDR-Crash-Course/blob/main/hackrf2.jpg?raw=true)
+	
 **3. LimeSDR (Low-Cost RM 5000++)**
 
 	Frekuensi: 100Khz-3.8Ghz
@@ -111,7 +116,7 @@ Dalam risalah ini, kami sediakan beberapa contoh untuk membaca data dari beberap
 ## 5. Maklumat Satelit
 Dianggarkan terdapat lebih 7 ribu satelit yang mengelilingi bumi. Setiap satelit mempunyai kedudukan dan fungsi masing-masing. Kebiasaannya satelit-satelit ini mempunyai maklumat tersendiri daripada website syarikat yang mengendalikan satelit tersebut. Kita boleh dapatkan senarai satelit melalui carian Google "satellite list frequency" untuk dapatkan maklumat.
 
-Maklumat setiap satelit akan disenaraikan dengan format [Nama Satelit] [Posisi] [Band Satelit]. Contoh:
+Maklumat setiap satelit akan disenaraikan dengan format [Nama Satelit][Posisi][Band Satelit]. Contoh:
 
 #### Yamal 300K 177.0°W Ku
 
@@ -148,7 +153,6 @@ Sebuah syarikat komunikasi satelit global, menggunakan frekuensi L-Band untuk te
 
 **3. Iridium**
 Buruj satelit Iridium menggunakan frekuensi L-Band untuk telefon satelit global dan perkhidmatan pemesejannya.
-
 
 **4. GLONASS - Global Navigation Satellite System**
 Satelit GLONASS menggunakan frekuensi L-band sekitar 1.602 GHz untuk perkhidmatan navigasi satelit yang serupa dengan GPS.
@@ -235,12 +239,15 @@ Biasanya penggunaan DSB dalam penyampaian audio atau data, USB dan LSB akan menj
 
 Bagi bacaan LSB dan USB adalah bacaan sebelah pihak sahaja samada atas (upper) atau bawah (low) maka kedua-dua teknik ini disebut juga sebaga SSB (Signle-Sideband). Dalam SSB salah satu pihak USB atau LSB akan diabaikan bagi mengurangkan keperluan bandwidth bacaan siaran. Ini menjadikan SSB agak lebih "spectral efficient" berbanding DSB tadi. USB dan LSB banyak digunakan dalam sistem komunikasi terutamanya bagi radio amatur dan komunikasi radio jarak pendek.
 
-## 8. Pintas Komunikasi Radio (Radio Communication Interception)
+## 8. Terima Komunikasi Radio (Receive Communication Interception)
 
-## 9. Emulasi Pancaran Komunikasi Radio (Emulate Radio Communication Beam)
+
+
+## 9. Pancaran Komunikasi Radio (Transmit Radio Communication)
 
 ## 10. Pengacau Komunikasi Radio (Radio Communication Jammer)
 
 ## 11. 3G / 4G IMSI Catcher - MITM Attack
 
 ## 12. Konsep Binaan Antena
+
