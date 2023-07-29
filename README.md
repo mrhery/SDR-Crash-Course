@@ -1,5 +1,5 @@
 
-# Pendidikan Asas Software Defined Radion (SDR)
+# Pendidikan Asas Software Defined Radio (SDR)
 
 Sebuah topik pembelajaran asas dalam bidang komunikasi radio dan digital dengan menggunakan SDR.
 
