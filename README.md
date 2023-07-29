@@ -13,7 +13,7 @@ Teknologi SDR ini digunakan pada banyak tempat dan bidang dalam dunia harini ter
 ## 2. Amaran
 Penggunaan SDR secara umum di khalayak ramai bagi tujuan mencuri dengar panggilan atau SMS atau menceroboh saluran ("channel") komunikasi lain adalah salah disisi undang-undang. Setiap penyampaian di dalam risalah adalah untuk tujuan pendidikan dan kegunaan pada ketika kecemasan seperti bencana, perperangan dan aktiviti-aktiviti yang tidak melanggar undang-undang.
 
-![gambar limesdr](https://github.com/mrhery/SDR-Crash-Course/blob/main/larangan-memintas?raw=true)
+![keratan akta memintas](https://github.com/mrhery/SDR-Crash-Course/blob/main/larangan-memintas.png?raw=true)
 
 Rujuk dokumen akta penuh disini: https://www.mcmc.gov.my/skmmgovmy/media/General/pdf/akta588bm.pdf
 
