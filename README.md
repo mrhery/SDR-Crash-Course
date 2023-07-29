@@ -13,6 +13,10 @@ Teknologi SDR ini digunakan pada banyak tempat dan bidang dalam dunia harini ter
 ## 2. Amaran
 Penggunaan SDR secara umum di khalayak ramai bagi tujuan mencuri dengar panggilan atau SMS atau menceroboh saluran ("channel") komunikasi lain adalah salah disisi undang-undang. Setiap penyampaian di dalam risalah adalah untuk tujuan pendidikan dan kegunaan pada ketika kecemasan seperti bencana, perperangan dan aktiviti-aktiviti yang tidak melanggar undang-undang.
 
+![gambar limesdr](https://github.com/mrhery/SDR-Crash-Course/blob/main/larangan-memintas?raw=true)
+
+Rujuk dokumen akta penuh disini: https://www.mcmc.gov.my/skmmgovmy/media/General/pdf/akta588bm.pdf
+
 ## 3. Perkakasan SDR
 Terdapat banyak perkakasan SDR diluar sana dan mempunyai kelebihan dan kekurangan tersendiri. Kami sendiri menggunakan beberapa SDR untuk membuat kajian bagi penulisan risalah ini. Terdapat beberapa ciri-ciri yang perlu diperhatikan dalam memilih SDR mengikut keperluan kita sendiri. Berikut adalah beberapa SDR yang popular dipasaran:
 
@@ -118,7 +122,7 @@ Dalam risalah ini, kami sediakan beberapa contoh untuk membaca data dari beberap
 ## 5. Maklumat Satelit
 Dianggarkan terdapat lebih 7 ribu satelit yang mengelilingi bumi. Setiap satelit mempunyai kedudukan dan fungsi masing-masing. Kebiasaannya satelit-satelit ini mempunyai maklumat tersendiri daripada website syarikat yang mengendalikan satelit tersebut. Kita boleh dapatkan senarai satelit melalui carian Google "satellite list frequency" untuk dapatkan maklumat.
 
-Maklumat setiap satelit akan disenaraikan dengan format [Nama Satelit][Posisi][Band Satelit]. Contoh:
+Maklumat setiap satelit akan disenaraikan dengan format `[Nama Satelit][Posisi][Band Satelit]`. Contoh:
 
 #### Yamal 300K 177.0°W Ku
 
