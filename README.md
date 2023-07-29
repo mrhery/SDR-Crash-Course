@@ -218,7 +218,7 @@ NFM merujuk kepada sejenis modulasi frekuensi di mana sisihan frekuensi siaran d
 
 Lihat rajah dibawah bagi perbezaan WFM dan NFM dalam graf.
 
-![beza nfm dan wfm]('https://www.researchgate.net/profile/Osameh-Al-Kofahi/publication/295397876/figure/fig9/AS:668784109051919@1536461965962/Wideband-and-narrowband-signals.png')
+![beza nfm dan wfm](https://github.com/mrhery/SDR-Crash-Course/blob/main/Wideband-and-narrowband-signals.png?raw=true)
 
 **8. Variable Gain Amplifier (VGA)**
 
