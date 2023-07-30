@@ -336,15 +336,21 @@ hackrf_transfer -f 315000000 -t kunci-kereta-nissan-almera -s 20000000 -a 1 -x 2
 ```
 Lihat apa yang berlaku pada kereta yang kita rekod kuncinya.
 
-## 10. Pengacau Komunikasi Radio (Radio Communication Jammer)
+## 10. SDR Sebagai Radar Kapal Terbang
+~belum siap
+
+## 11. Pengacau Komunikasi Radio (Radio Communication Jammer)
 Hanya di MyOPECS Private Training
 
-## 11. 3G / 4G IMSI Catcher - MITM Attack
+## 12. 3G / 4G IMSI Catcher - MITM Attack
+Hanya di MyOPECS Private Training
+1. Logging keluar masuk no telefon dalam radius
+2. SDR sebagai "fake-tower" untuk mencuri dengar/pintas panggilan telefon / SMS
+3. SDR sebagai Radar posisi no telefon dalam radius
+
+## 13. Konsep Binaan Antena
 Hanya di MyOPECS Private Training
 
-## 12. Konsep Binaan Antena
-Hanya di MyOPECS Private Training
-
-## 13. Penutup
+## 14. Penutup
 Risalah ini telah ditulis oleh Mr Hery dari Malaysia Open Cyber Security (MyOPECS) bagi kegunaan kelas sebagai salah satu modul di CyberSec Private Training yang berlangsung selama 4 bulan. Risalah ini juga diperiksa, disunting dan dikomentar oleh beberapa rakan ahli MyOPECS yang lain serta rakan-rakan dari anggota polis, tentera dan kakitangan kerajaan lainnya.
 
